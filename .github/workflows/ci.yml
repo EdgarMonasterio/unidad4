@@ -22,3 +22,13 @@ jobs:
 
       - name: Ejecutar pruebas
         run: pytest -v
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - name: Simular despliegue a producción
+        run: |
+          echo "Desplegando a producción..."
+          echo "Versión lista para usar."
